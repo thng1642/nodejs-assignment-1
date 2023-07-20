@@ -14,10 +14,9 @@ app.use(express.urlencoded({
  * parse requests with content-type application/json
  */
 app.use(express.json())
-
+app.get('/', (req, res) => {
+  res.json({'message': 'ok'});
+})
 route(app)
 
 app.listen(5000)
-
-
-module.exports = app
