@@ -19,4 +19,4 @@ app.get('/', (req, res) => {
 })
 route(app)
 
-app.listen(5000)
+app.listen(5000 || process.env.PORT)
